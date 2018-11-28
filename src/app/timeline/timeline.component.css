@@ -1,0 +1,131 @@
+#timeline-container{
+    margin-top:160px;
+    padding-top:40px;
+    background-color:white;
+    border-radius:10px;
+}
+@media (max-width: 576px) {
+    .container {
+      width: 350px;
+    }
+}
+  @media (min-width: 992px) {
+    .container {
+      width: 600px;
+    }
+}
+  
+  @media (min-width: 1200px) {
+    .container {
+      width: 1000px;
+    }
+}
+
+@media (max-width: 576px) { 
+    #timeline-container{
+        margin-top:100px;
+    }
+}
+.post{
+    border-bottom:2px #BBBBBB solid;
+    padding-bottom : 20px;
+    margin-bottom:10px;
+    color:black;
+}
+.link-btn{
+    display:block;
+    height:100%;
+    width:100%;
+    position: relative;;
+    top:0;
+    left:0;
+    text-decoration: none;
+}
+
+.link-btn:hover{
+    background-color:#DDDDDD;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+}
+
+.block{
+    display: block;
+}
+.align-right{
+    display: inline-block;
+    text-align:right;
+    position: relative;
+    left:70%;
+}
+.title{
+    display: block;
+    width: 100%; 
+    color:black;
+    font-size:20px;
+    font-weight: bold;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow: ellipsis;
+}
+.time{
+    font-size:12px;
+    color:gray;
+}
+.link{
+    color:green;
+}
+.like{
+    color:black;
+}
+.like-btn-div{
+    margin-right:50px;
+
+}
+.url-copy-btn, .like-num{
+    color:black;
+    font-size:20px;
+    margin-right:10px;
+}
+.like-btn{
+    color:#fed136;
+    font-size:25px;
+    font-weight: bold;
+    margin-right:10px;
+}
+
+.url-copy-btn:hover, .like-btn:hover{
+    color:rgb(35, 132, 170);
+}
+
+.content{
+    display: inline-block; 
+    width: 100%; 
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: normal; 
+    line-height: 1.2; 
+    height: 2.4em; 
+    text-align: left; 
+    word-wrap: break-word; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    color:black;
+}
+
+.tag{
+    padding:5px;
+    margin-right:5px;
+    margin-bottom: 6px;
+    border:0px;
+    border-radius: 5px;
+    background-color:#DDDDDD;
+    font-family: 'Jua', sans-serif;
+    font-size:12px;
+}
+.popover_div{
+    display: inline;
+}

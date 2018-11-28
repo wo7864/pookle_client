@@ -1,0 +1,23 @@
+<div class="container" id="timeline-container">
+    <div *ngFor="let post of posts; index as i" class="post">
+        <a href="{{post.url}}" class="link-btn">
+            <div class="block">
+                <a href="#" class="title">{{post.title}}</a>
+            </div>
+
+            <span class="time">{{post.date}}</span>
+            <p class="content">{{post.post}}</p>
+        </a>
+        <a id="{{i}}" (click)="favorite(i)" class="like-btn-div">
+            <span *ngIf="!isFavorite[i]" class="like-btn">☆</span>
+            <span *ngIf="isFavorite[i]" class="like-btn">★</span>
+            <span class="like-num">{{post.fav_cnt}}</span></a>
+        <a (click)="copyMessage(post.url)" placement="top"
+                ngbPopover="복사되었습니다." popoverTitle="알림" class="url-copy-btn" ><i class="far fa-copy url-copy-btn"></i></a>
+        <div *ngFor="let tag of post.tag; index as k" class="popover_div">
+            <button *ngIf="!is_auth" placement="top" ngbPopover="로그인 후 이용해주세요" popoverTitle="알림" (click)="addFavTag(i, k)" class="tag">{{tag}}</button>
+            <button *ngIf="is_auth" placement="top" ngbPopover="관심태그에 추가되었습니다." popoverTitle="알림" (click)="addFavTag(i, k)" class="tag">{{tag}}</button>
+        </div>
+    </div>
+</div>
+
